@@ -5,6 +5,7 @@ buildscript {
     ext.kotlin_version = '1.1.51'
 
     repositories {
+        maven { url 'http://repo.spring.io/milestone' }
         mavenCentral()
     }
     dependencies {
@@ -20,6 +21,8 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "io.projectreactor:reactor-core:3.1.8.RELEASE"
+    testCompile("io.projectreactor:reactor-test:3.1.8.RELEASE")
 }
 
 compileKotlin {
